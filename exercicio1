@@ -1,0 +1,81 @@
+def ex1_a(n):
+    if n == 1:
+        return 10
+    else:
+        return ex1_a(n - 1) + 10
+
+def ex1_b(n):
+    if n == 1:
+        return 2
+    else:
+        return ex1_b(n - 1) - 1
+
+def ex1_c(n):
+    if n == 1:
+        return 1
+    else:
+        return ex1_c(n - 1) + n**2
+
+def ex1_d(n):
+    if n == 1:
+        return 1
+    else:
+        return n**2 * ex1_d(n - 1) + n - 1
+
+def ex1_e(n):
+    if n == 1:
+        return 3
+    elif n == 2:
+        return 5
+    else:
+        return (n - 1) * ex1_e(n - 1) + (n - 2) * ex1_e(n - 2)
+
+def ex1_f(n):
+    if n == 1:
+        return 2
+    elif n == 2:
+        return 5
+    else:
+        return ex1_f(n - 1) * ex1_f(n - 2)
+
+def ex1_g(n):
+  if n == 1:
+    return 1
+  elif n == 2:
+    return 2
+  elif n == 3:
+    return 3
+  else:
+    return ex1_g(n - 1) + 2 * ex1_g(n - 2) + 3 * ex1_g(n - 3)
+
+print("Escolha a questão a ser executada:")
+print("a) ex1_a e n >= 2")
+print("b) ex1_b e n >= 2")
+print("c) ex1_c e n >= 2")
+print("d) ex1_d e n >= 2")
+print("e) ex1_e e n > 2")
+print("f) ex1_f e n > 2")
+print("g) ex1_g e n > 3")
+
+opcao = input("Opção: ")
+
+n = int(input("Digite o valor de n: "))
+
+if opcao == 'a' and n >= 2:
+    resultado = ex1_a(n)
+elif opcao == 'b'and n >= 2:
+    resultado = ex1_b(n)
+elif opcao == 'c' and n >= 2:
+    resultado =ex1_c(n)
+elif opcao == 'd' and n >= 2:
+    resultado = ex1_d(n)
+elif opcao == 'e'and n > 2:
+    resultado = ex1_e (n)
+elif opcao == 'f'and n > 2:
+    resultado = ex1_f(n)
+elif opcao == 'g'and n > 3:
+    resultado = ex1_g(n)
+else:
+    resultado = "Erro, letra escolhida ou valor de n não está nos conformes. "
+
+print(f"Resultado: {resultado}")
